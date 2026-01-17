@@ -27,9 +27,9 @@ export const projects: Project[] = [
         status: 'Completed',
         assets: {
             images: [
-                '/assets/wfs-engineering/wfseng_1.png',
-                '/assets/wfs-engineering/wfseng_2.png',
-                '/assets/wfs-engineering/wfseng_3.png',
+                '/assets/wfs-engineering/wfseng_17.png',
+                '/assets/wfs-engineering/wfseng_18.png',
+                '/assets/wfs-engineering/wfseng_19.png',
                 '/assets/wfs-engineering/wfseng_4.png',
                 '/assets/wfs-engineering/wfseng_5.png',
                 '/assets/wfs-engineering/wfseng_6.png',
@@ -43,6 +43,9 @@ export const projects: Project[] = [
                 '/assets/wfs-engineering/wfseng_14.png',
                 '/assets/wfs-engineering/wfseng_15.png',
                 '/assets/wfs-engineering/wfseng_16.png',
+                '/assets/wfs-engineering/wfseng_1.png',
+                '/assets/wfs-engineering/wfseng_2.png',
+                '/assets/wfs-engineering/wfseng_3.png',
             ],
             video: '/assets/wfs-engineering/notification.mp4'
         },
@@ -64,10 +67,19 @@ export const projects: Project[] = [
         status: 'Completed',
         assets: {
             images: [
-                '/assets/auram/auram_1.png',
                 '/assets/auram/auram_2.png',
+                '/assets/auram/auram_1.png',
                 '/assets/auram/auram_3.png',
                 '/assets/auram/auram_4.png',
+                '/assets/auram/auram_5.png',
+                '/assets/auram/auram_6.png',
+                '/assets/auram/auram_7.png',
+                '/assets/auram/auram_8.png',
+                '/assets/auram/auram_9.png',
+                '/assets/auram/auram_10.png',
+                '/assets/auram/auram_12.png',
+                '/assets/auram/auram_13.png',
+                '/assets/auram/auram_14.png',
             ],
             video: '/assets/auram/Auram.mp4'
         },
@@ -89,12 +101,21 @@ export const projects: Project[] = [
         status: 'Completed',
         assets: {
             images: [
-                '/assets/hotelmania/hotelmania_1.png',
+                '/assets/hotelmania/hotelmania_6.png',
                 '/assets/hotelmania/hotelmania_2.png',
                 '/assets/hotelmania/hotelmania_3.png',
                 '/assets/hotelmania/hotelmania_4.png',
                 '/assets/hotelmania/hotelmania_5.png',
-                '/assets/hotelmania/hotelmania_6.png',
+                '/assets/hotelmania/hotelmania_1.png',
+                '/assets/hotelmania/hotelmania_7.png',
+                '/assets/hotelmania/hotelmania_8.png',
+                '/assets/hotelmania/hotelmania_9.png',
+                '/assets/hotelmania/hotelmania_10.png',
+                '/assets/hotelmania/hotelmania_11.png',
+                '/assets/hotelmania/hotelmania_12.png',
+                '/assets/hotelmania/hotelmania_13.png',
+                '/assets/hotelmania/hotelmania_14.png',
+                '/assets/hotelmania/hotelmania_15.png',
             ],
             video: '/assets/hotelmania/HotelMania_Home.mp4'
         },
@@ -116,13 +137,18 @@ export const projects: Project[] = [
         status: 'Completed',
         assets: {
             images: [
-                '/assets/rentalday/rd_1.png',
-                '/assets/rentalday/rd_2.png',
                 '/assets/rentalday/rd_3.png',
+                '/assets/rentalday/rd_2.png',
+                '/assets/rentalday/rd_1.png',
                 '/assets/rentalday/rd_4.png',
                 '/assets/rentalday/rd_5.png',
                 '/assets/rentalday/rd_6.png',
                 '/assets/rentalday/rd_7.png',
+                '/assets/rentalday/rd_8.png',
+                '/assets/rentalday/rd_9.png',
+                '/assets/rentalday/rd_10.png',
+                '/assets/rentalday/rd_11.png',
+                '/assets/rentalday/rd_12.png',
             ],
             video: '/assets/rentalday/RentalDay_Home_2.mp4'
         },
@@ -172,14 +198,14 @@ export const projects: Project[] = [
         status: 'Completed',
         assets: {
             images: [
-                '/assets/mindofmine/mom_1.png',
-                '/assets/mindofmine/mom_2.png',
-                '/assets/mindofmine/mom_3.png',
                 '/assets/mindofmine/mom_4.png',
+                '/assets/mindofmine/mom_2.png',
+                '/assets/mindofmine/mom_8.png',
+                '/assets/mindofmine/mom_3.png',
                 '/assets/mindofmine/mom_5.png',
                 '/assets/mindofmine/mom_6.png',
                 '/assets/mindofmine/mom_7.png',
-                '/assets/mindofmine/mom_8.png',
+                '/assets/mindofmine/mom_1.png',
                 '/assets/mindofmine/mom_9.png',
                 '/assets/mindofmine/mom_10.png',
                 '/assets/mindofmine/mom_11.png',
@@ -216,9 +242,20 @@ export const projects: Project[] = [
         status: 'Completed',
         assets: {
             images: [
-                '/assets/logistics-corp/lc_1.png',
                 '/assets/logistics-corp/lc_2.png',
+                '/assets/logistics-corp/lc_1.png',
                 '/assets/logistics-corp/lc_3.png',
+                '/assets/logistics-corp/lc_4.png',
+                '/assets/logistics-corp/lc_5.png',
+                '/assets/logistics-corp/lc_6.png',
+                '/assets/logistics-corp/lc_7.png',
+                '/assets/logistics-corp/lc_8.png',
+                '/assets/logistics-corp/lc_9.png',
+                '/assets/logistics-corp/lc_10.png',
+                '/assets/logistics-corp/lc_11.png',
+                '/assets/logistics-corp/lc_12.png',
+                '/assets/logistics-corp/lc_13.png',
+                '/assets/logistics-corp/lc_14.png',
             ],
             video: '/assets/logistics-corp/Logistics_Dashboard.mp4'
         },
@@ -243,10 +280,10 @@ export const aboutMe = {
     title: 'IT Undergraduate | Full Stack Developer',
     description: "I am an undergraduate student in the BSc (Hons) in Information Technology program at SLIIT. My work spans full-stack web development, mobile application development, and UI/UX design, with a strong focus on clean architecture, scalability, and real-world problem solving.",
     skills: {
-        languages: ['JavaScript', 'TypeScript', 'Java', 'Kotlin', 'Python', 'C', 'C++', 'PHP'],
-        frontend: ['React', 'React Native', 'Vite', 'Tailwind CSS', 'Next.js'],
-        backend: ['Node.js', 'Express.js', 'Spring Boot'],
-        database: ['MongoDB', 'MySQL', 'PostgreSQL', 'SQLite'],
-        tools: ['Git', 'Docker', 'Figma', 'Postman']
+        languages: ['JavaScript', 'TypeScript', 'Java', 'Kotlin', 'Python', 'C', 'C++', 'PHP', 'HTML', 'CSS',],
+        frontend: ['React', 'React Native', 'Vite', 'Tailwind CSS', 'Next.js', 'Bootstrap', 'Nuxt.js', 'Bulma',],
+        backend: ['Node.js', 'Express.js', 'Spring Boot', 'Apache Tomcat', 'Docker', 'Web Services', 'REST API', 'GraphQL'],
+        database: ['MongoDB', 'MySQL', 'PostgreSQL', 'SQLite', 'Oracle', 'MS SQL Server', 'NoSQL', 'Firebase'],
+        tools: ['Git', 'GitHub', 'Wordpress', 'Postman', 'Jira', 'Trello', 'Canva', 'Figma', 'Vercel', 'Netlify', 'AWS']
     }
 };
