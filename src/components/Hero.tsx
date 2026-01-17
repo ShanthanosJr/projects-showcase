@@ -17,7 +17,7 @@ export const Hero: React.FC = () => {
                     transition={{ duration: 0.5 }}
                 >
                     <span className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm mb-6 text-purple-300">
-                        Portfolio Showcase
+                        Project Showcase
                     </span>
                     <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/60">
                         {aboutMe.name}
