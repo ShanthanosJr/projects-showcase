@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { type Project } from '../data/projects';
-import { X, Github, ChevronLeft, ChevronRight, Play } from 'lucide-react';
+import { X, Github, ChevronLeft, ChevronRight, Play, CheckCircle } from 'lucide-react';
 
 interface ProjectDetailProps {
     project: Project | null;
@@ -140,6 +140,20 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }
                                 ))}
                             </div>
                         </div>
+
+                        {project.features && project.features.length > 0 && (
+                            <div className="mb-8">
+                                <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">Key Features</h3>
+                                <div className="space-y-2">
+                                    {project.features.map((feature, idx) => (
+                                        <div key={idx} className="flex items-start gap-3 text-sm text-gray-300">
+                                            <CheckCircle className="w-4 h-4 text-purple-400 mt-0.5 flex-shrink-0" />
+                                            <span>{feature}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
 
                         <div className="flex gap-4 mt-auto">
                             {/* Conditional rendering based on repo type could act differently, 

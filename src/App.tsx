@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Hero } from './components/Hero';
 import { TechStack } from './components/TechStack';
-import { ProjectCard } from './components/ProjectCard';
+import { ProjectCarousel } from './components/ProjectCarousel';
 import { ProjectDetail } from './components/ProjectDetail';
 import { Footer } from './components/Footer';
 import { projects, type Project } from './data/projects';
@@ -16,7 +16,7 @@ function App() {
 
       <TechStack />
 
-      <section className="py-24 px-6 max-w-7xl mx-auto" id="projects">
+      <section className="py-24 px-6 max-w-full mx-auto overflow-hidden" id="projects">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -29,16 +29,7 @@ function App() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              index={index}
-              onClick={setSelectedProject}
-            />
-          ))}
-        </div>
+        <ProjectCarousel projects={projects} onProjectClick={setSelectedProject} />
       </section>
 
       <Footer />

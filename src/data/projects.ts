@@ -45,7 +45,14 @@ export const projects: Project[] = [
                 '/assets/wfs-engineering/wfseng_16.png',
             ],
             video: '/assets/wfs-engineering/notification.mp4'
-        }
+        },
+        features: [
+            'Real-time safety incident reporting and alerts',
+            'Role-based dashboard for Site Managers, Engineers, and Workers',
+            'Automated workflow tracking and timeline visualization',
+            'Geo-location tagging for safety hazards',
+            'PDF report generation for site audits'
+        ]
     },
     {
         id: 'auram',
@@ -63,7 +70,14 @@ export const projects: Project[] = [
                 '/assets/auram/auram_4.png',
             ],
             video: '/assets/auram/Auram.mp4'
-        }
+        },
+        features: [
+            'Responsive product carousel with touch gestures',
+            'Advanced filtering (price, material, collection)',
+            'Cart management with local storage persistence',
+            'Optimized image loading with blur-up placeholders',
+            'Seamless checkout flow UI'
+        ]
     },
     {
         id: 'hotelmania',
@@ -83,7 +97,14 @@ export const projects: Project[] = [
                 '/assets/hotelmania/hotelmania_6.png',
             ],
             video: '/assets/hotelmania/HotelMania_Home.mp4'
-        }
+        },
+        features: [
+            'Dynamic room availability calendar',
+            'Dual user roles: Admin (manage rooms) vs Guest (booking)',
+            'Integrated payment gateway simulation',
+            'Tour package customization engine',
+            'Automated email confirmations'
+        ]
     },
     {
         id: 'rentalday',
@@ -104,7 +125,14 @@ export const projects: Project[] = [
                 '/assets/rentalday/rd_7.png',
             ],
             video: '/assets/rentalday/RentalDay_Home_2.mp4'
-        }
+        },
+        features: [
+            'Date-range picker with availability validation',
+            'Vehicle categorization and sorting',
+            'Rental history tracking for users',
+            'Admin panel for fleet management',
+            'Cost calculator based on duration and vehicle type'
+        ]
     },
     {
         id: 'tourday',
@@ -124,7 +152,14 @@ export const projects: Project[] = [
                 '/assets/tourday/td_6.png',
             ],
             video: '/assets/tourday/TourDay.mp4'
-        }
+        },
+        features: [
+            'Interactive map integration for tour routes',
+            'Customer review and rating system',
+            'Booking slot management',
+            'Multi-currency display support',
+            'User profile for saved trips'
+        ]
     },
     {
         id: 'mindofmine',
@@ -162,13 +197,20 @@ export const projects: Project[] = [
                 '/assets/mindofmine/mom_23.png',
             ]
             // No video found for MindOfMine
-        }
+        },
+        features: [
+            'Daily mood logging with emoji interface',
+            'Statistical graphs for mood trends over time',
+            'Secure local database (SQLite) for privacy',
+            'Customizable reminders for journaling',
+            'Sentiment analysis on journal entries'
+        ]
     },
     {
         id: 'logistics-corp',
-        title: 'Logistics Dashboard',
+        title: 'Logistics Corp',
         type: 'Web Application',
-        stack: ['React', 'Full Stack?'],
+        stack: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Spring Boot'],
         description: 'A logistics and supply chain management dashboard.',
         repoType: 'Private',
         status: 'Completed',
@@ -179,7 +221,14 @@ export const projects: Project[] = [
                 '/assets/logistics-corp/lc_3.png',
             ],
             video: '/assets/logistics-corp/Logistics_Dashboard.mp4'
-        }
+        },
+        features: [
+            'Real-time shipment tracking visualization',
+            'Supply chain analytics charts',
+            'Driver management and route optimization',
+            'Inventory level monitoring',
+            'Notification system for delivery updates'
+        ]
     }
 ];
 

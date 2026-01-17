@@ -7,13 +7,14 @@ interface ProjectCardProps {
     project: Project;
     onClick: (project: Project) => void;
     index: number;
+    isCarouselItem?: boolean;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick, index }) => {
+export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick, index, isCarouselItem = false }) => {
     return (
         <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={isCarouselItem ? {} : { opacity: 0, y: 20 }}
+            whileInView={isCarouselItem ? {} : { opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
             onClick={() => onClick(project)}
