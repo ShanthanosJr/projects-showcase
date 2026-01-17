@@ -1,53 +1,75 @@
-# Project Showcase
+# 📁 Project Showcase
 
-A premium, interactive portfolio website built with **React**, **TypeScript**, and **Tailwind CSS**. This application showcases my academic and personal software projects with a modern, responsive design.
+This repository presents a curated showcase of my academic, solo, and personal software projects developed during my undergraduate studies in Information Technology.
+Each project highlights its purpose, technology stack, and scope to demonstrate my practical experience and engineering approach.
 
-## 🚀 Features
+> 🔒 **Note:** Source code for several projects is maintained in private repositories due to academic policies and confidentiality constraints. Code access can be provided upon request.
 
-- **Interactive Project Gallery**: Browse projects with hover effects and detailed cards.
-- **Detailed Modals**: deep dive into each project with descriptions, tech stacks, and repo links.
-- **Inline Video Player**: Watch project demos directly within the application (custom video player implementation).
-- **Responsive Design**: Optimized for all devices (Desktop, Tablet, Mobile).
-- **Premium UI**: Dark mode aesthetic, glassmorphism effects, and smooth animations using `framer-motion`.
+## 👨‍🎓 About Me
+I am an undergraduate student in the BSc (Hons) in Information Technology program at SLIIT, currently in my third year.
+My work spans full‑stack web development, mobile application development, and UI/UX design, with a strong focus on clean architecture, scalability, and real‑world problem solving.
 
-## 🛠️ Tech Stack
+---
 
-- **Frontend**: React 19, Vite
-- **Styling**: Tailwind CSS v3.4, Vanilla CSS (custom animations)
-- **Language**: TypeScript
-- **Icons**: Lucide React
-- **Animation**: Framer Motion
+## 🏗️ Academic & Major Projects
 
-## 📦 Installation & Run
+### Smart Construction Workflow & Safety Management System (WorkFlows Engineering)
+- **Type:** Web Application (MERN)
+- **Stack:** React, Node.js, Express.js, MongoDB
+- **Description:** A smart construction management system to manage workflows, safety processes, timelines, and dashboards. The system supports structured project monitoring and operational visibility across construction activities.
+- **Repository:** Public
 
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/ShanthanosJr/projects-showcase.git
-    cd Project_Showcase
-    ```
+### Mood Tracker (MindOfMine)
+- **Type:** Mobile Application
+- **Stack:** Kotlin, SQLite
+- **Description:** A mobile application designed to log daily moods and analyze emotional patterns, supporting self‑reflection and mental wellness tracking.
+- **Repository:** 🔒 Private
 
-2.  **Install dependencies**
-    ```bash
-    npm install
-    ```
+---
 
-3.  **Run development server**
-    ```bash
-    npm run dev
-    ```
+## 🚀 Solo & Personal Projects
 
-4.  **Build for production**
-    ```bash
-    npm run build
-    ```
+### HotelMania – Hotel Management System
+- **Type:** Web Application
+- **Stack:** React, Vite, Tailwind CSS, MongoDB
+- **Description:** A hotel management system for handling tour packages, bookings, schedules, and customer interactions through a modern web interface.
+- **Repository:** 🔒 Private
 
-## 📂 Project Structure
+### TourDay – Tour Management Platform
+- **Type:** Web Application
+- **Stack:** React, Vite, MongoDB
+- **Description:** A tour management platform designed to handle tour packages, customer bookings, and travel schedules with a clean and responsive frontend.
+- **Repository:** 🔒 Private
 
-- `src/components`: UI Components (Hero, ProjectCard, ProjectDetail, etc.)
-- `src/data`: Structured project data and assets mapping.
-- `public/assets`: Project images and videos.
+### RentalDay – Vehicle Rental Management System
+- **Type:** Web Application
+- **Stack:** React, Vite, MongoDB
+- **Description:** A vehicle rental management platform supporting vehicle listings, availability tracking, and rental workflows.
+- **Repository:** 🔒 Private
+
+### Auram – Jewelry E‑Commerce Frontend
+- **Type:** Frontend Web Application
+- **Stack:** React, Vite, Tailwind CSS
+- **Description:** A modern e‑commerce frontend focused on product browsing, inventory display, and responsive UI design for a jewelry brand.
+- **Repository:** 🔒 Private
+
+### Logistics Dashboard
+- **Type:** Web Application
+- **Stack:** React, Full Stack
+- **Description:** A logistics and supply chain management dashboard.
+- **Repository:** 🔒 Private
+
+---
+
+## 🛠️ Technical Focus Areas
+- **Programming Languages:** C, C++, Python, Java, Kotlin, PHP, JavaScript, TypeScript
+- **Frontend Development:** React, React Native, Vite, HTML, CSS, Tailwind CSS
+- **Backend & APIs:** Node.js, Express.js, Spring Boot, RESTful APIs
+- **Databases:** MySQL, MongoDB, SQLite, PostgreSQL
+- **Tools & Practices:** Git, Docker, Postman, Figma, Agile workflows
+
+---
 
 ## 📄 License
-
 This project is proprietary and confidential. Unauthorized copying of this file, via any medium is strictly prohibited.
 Copyright (C) 2026 Kavishka Ranamukage. All Rights Reserved.
