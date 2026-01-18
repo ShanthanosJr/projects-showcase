@@ -57,7 +57,7 @@ export const ParticleBackground: React.FC = () => {
             if (!ctx) return;
             ctx.clearRect(0, 0, width, height);
 
-            particles.forEach((p, i) => {
+            particles.forEach((p) => {
                 // Move
                 p.x += p.vx;
                 p.y += p.vy;
