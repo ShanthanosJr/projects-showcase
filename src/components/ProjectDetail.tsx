@@ -85,6 +85,8 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }
                                 <img
                                     src={project.assets.images[currentImageIndex]}
                                     alt={project.title}
+                                    loading="lazy"
+                                    decoding="async"
                                     className="w-full h-full object-contain"
                                 />
 
