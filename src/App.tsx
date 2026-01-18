@@ -7,6 +7,7 @@ import { CommandPalette } from './components/CommandPalette';
 import { Footer } from './components/Footer';
 import { projects, type Project } from './data/projects';
 import { motion, AnimatePresence } from 'framer-motion';
+import { OrbitalBackground } from './components/OrbitalBackground';
 
 function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -17,9 +18,12 @@ function App() {
 
       <Hero />
 
+
+
       <TechStack />
 
-      <section className="py-24 px-6 max-w-full mx-auto overflow-hidden" id="projects">
+      <section className="py-24 px-6 max-w-full mx-auto overflow-hidden relative" id="projects">
+        <OrbitalBackground />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -32,9 +36,15 @@ function App() {
           </p>
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs text-muted-foreground font-mono">
             <span>Details hidden in plain sight</span>
-            <span className="flex items-center gap-1 bg-white/10 px-1.5 py-0.5 rounded text-gray-300">
-              <span className="text-[10px]">⌘</span>K or Ctrl+K
-            </span>
+            <div className="flex items-center gap-1.5 ml-1">
+              <span className="flex items-center gap-1 bg-white/10 px-1.5 py-0.5 rounded text-gray-300">
+                <span className="text-[10px]">⌘</span>K
+              </span>
+              <span className="opacity-50">/</span>
+              <span className="flex items-center gap-1 bg-white/10 px-1.5 py-0.5 rounded text-gray-300">
+                <span className="text-[10px]">^</span>K
+              </span>
+            </div>
           </div>
         </motion.div>
 

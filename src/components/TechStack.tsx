@@ -4,6 +4,7 @@ import { aboutMe } from '../data/projects';
 import { fetchGithubStats, type GithubStats } from '../utils/github';
 import { GitCommit, BookMarked, Calendar } from 'lucide-react';
 import { TiltCard } from './TiltCard';
+import { InteractiveGridBackground } from './InteractiveGridBackground';
 
 // Define related skills for the "Constellation" effect
 const RELATED_SKILLS: Record<string, string[]> = {
@@ -71,6 +72,7 @@ export const TechStack: React.FC = () => {
 
     return (
         <section className="py-24 px-6 relative overflow-hidden">
+            <InteractiveGridBackground />
             <div className="max-w-4xl mx-auto relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
