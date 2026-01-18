@@ -2,13 +2,20 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { aboutMe, socialLinks } from '../data/projects';
 import { Github, Linkedin, ExternalLink, ChevronDown } from 'lucide-react';
+import { useScrambleText } from '../hooks/useScrambleText';
+import { ParticleBackground } from './ParticleBackground';
 
 export const Hero: React.FC = () => {
+    const scrambledTitle = useScrambleText(aboutMe.title);
+
     return (
         <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-6 pt-20">
+            {/* Particle Force Field Background */}
+            <ParticleBackground />
+
             {/* Background gradients */}
             {/* Aurora Mesh Gradient Background */}
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0 opacity-50">
                 <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-600/20 rounded-full blur-[120px] mix-blend-screen animate-blob" />
                 <div className="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-600/20 rounded-full blur-[120px] mix-blend-screen animate-blob animation-delay-2000" />
                 <div className="absolute bottom-[-20%] left-[20%] w-[60%] h-[60%] bg-indigo-600/20 rounded-full blur-[120px] mix-blend-screen animate-blob animation-delay-4000" />
@@ -26,8 +33,8 @@ export const Hero: React.FC = () => {
                     <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/60">
                         {aboutMe.name}
                     </h1>
-                    <h2 className="text-2xl md:text-3xl text-muted-foreground mb-8 text-balance">
-                        {aboutMe.title}
+                    <h2 className="text-2xl md:text-3xl text-muted-foreground mb-8 text-balance font-mono">
+                        {scrambledTitle}
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
                         {aboutMe.description}

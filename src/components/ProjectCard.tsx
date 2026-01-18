@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { type Project } from '../data/projects';
 import { Lock, Globe, ArrowRight } from 'lucide-react';
+import { useMousePosition } from '../hooks/useMousePosition';
 
 interface ProjectCardProps {
     project: Project;
@@ -11,16 +12,29 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick, index, isCarouselItem = false }) => {
+    const { ref, opacity } = useMousePosition();
+
     return (
         <motion.div
+            layoutId={`card-${project.id}`}
+            ref={ref}
             initial={isCarouselItem ? {} : { opacity: 0, y: 20 }}
             whileInView={isCarouselItem ? {} : { opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
             onClick={() => onClick(project)}
-            className="group bg-card/40 backdrop-blur-md border border-white/5 rounded-2xl overflow-hidden cursor-pointer hover:border-white/20 transition-all duration-300 hover:bg-card/60 flex flex-col h-full"
+            className="group relative bg-card/40 backdrop-blur-md border border-white/5 rounded-2xl overflow-hidden cursor-pointer hover:border-white/20 transition-all duration-300 hover:bg-card/60 flex flex-col h-full"
         >
-            <div className="relative h-48 overflow-hidden">
+            {/* Spotlight Effect */}
+            <div
+                className="pointer-events-none absolute -inset-px opacity-0 transition duration-300 group-hover:opacity-100"
+                style={{
+                    opacity: opacity,
+                    background: `radial-gradient(600px circle at var(--x) var(--y), rgba(147, 51, 234, 0.1), transparent 40%)`
+                }}
+            />
+
+            <div className="relative h-48 overflow-hidden z-20">
                 {project.assets.images[0] ? (
                     <img
                         src={project.assets.images[0]}
@@ -38,11 +52,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick, inde
                 </div>
             </div>
 
-            <div className="p-6 flex flex-col flex-grow">
+            <div className="p-6 flex flex-col flex-grow z-20 text-center">
                 <h3 className="text-xl font-bold mb-2 group-hover:text-purple-400 transition-colors">{project.title}</h3>
                 <p className="text-muted-foreground text-sm mb-6 line-clamp-3 flex-grow">{project.description}</p>
 
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap justify-center gap-2 mb-6">
                     {project.stack.slice(0, 3).map((tech) => (
                         <span key={tech} className="text-xs px-2 py-1 bg-white/5 rounded border border-white/5 text-gray-300">
                             {tech}
@@ -55,8 +69,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick, inde
                     )}
                 </div>
 
-                <div className="flex items-center text-sm font-medium text-purple-400 group-hover:translate-x-1 transition-transform">
-                    View Details <ArrowRight className="w-4 h-4 ml-1" />
+                <div className="flex justify-center mt-auto">
+                    <button className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-purple-600 border border-white/10 hover:border-purple-500 rounded-full text-sm font-medium transition-all duration-300 group/btn">
+                        View Details
+                        <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </button>
                 </div>
             </div>
         </motion.div>

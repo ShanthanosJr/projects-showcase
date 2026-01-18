@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { type Project } from '../data/projects';
 import { X, Github, ChevronLeft, ChevronRight, Play, CheckCircle } from 'lucide-react';
+import { ArchitectureDiagram } from './ArchitectureDiagram';
 
 interface ProjectDetailProps {
     project: Project | null;
@@ -11,11 +12,13 @@ interface ProjectDetailProps {
 export const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [showVideo, setShowVideo] = useState(false);
+    const [activeTab, setActiveTab] = useState<'overview' | 'architecture'>('overview');
 
     // Reset state when project changes
     React.useEffect(() => {
         setCurrentImageIndex(0);
         setShowVideo(false);
+        setActiveTab('overview');
     }, [project]);
 
     if (!project) return null;
@@ -35,7 +38,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }
     };
 
     return (
-        <AnimatePresence>
+        <React.Fragment>
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -44,9 +47,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }
                 className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
             >
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                    exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                    layoutId={`card-${project.id}`}
                     onClick={(e) => e.stopPropagation()}
                     className="bg-card w-full max-w-5xl max-h-[90vh] rounded-3xl overflow-hidden border border-white/10 flex flex-col md:flex-row relative shadow-2xl shadow-purple-900/20"
                 >
@@ -57,9 +58,11 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }
                         <X className="w-5 h-5" />
                     </button>
 
-                    {/* Media Section */}
+                    {/* Media Section - Only show on Overview or if desktop layout allows split view. 
+                        For simplicity, we keep it on left side always, or maybe hide it on Architecture tab if space is needed.
+                        Let's keep it visible for context. */}
                     <div className="w-full md:w-3/5 bg-black/50 relative group flex items-center justify-center bg-gray-900 min-h-[300px]">
-                        {/* Main Image/Video Display */}
+                        {/* ... existing media rendering code ... */}
                         {showVideo && project.assets.video ? (
                             <div className="w-full h-full flex items-center justify-center bg-black relative">
                                 <button
@@ -121,43 +124,80 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }
                     </div>
 
                     {/* Content Section */}
-                    <div className="w-full md:w-2/5 p-8 overflow-y-auto bg-card">
-                        <div className="mb-6">
-                            <span className="text-sm text-purple-400 font-medium mb-2 block">{project.type}</span>
-                            <h2 className="text-3xl font-bold mb-4">{project.title}</h2>
-                            <p className="text-muted-foreground leading-relaxed mb-6">
-                                {project.description}
-                            </p>
+                    <div className="w-full md:w-2/5 p-8 overflow-y-auto bg-card flex flex-col">
+                        <div className="flex gap-4 mb-6 border-b border-white/10 pb-2">
+                            <button
+                                onClick={() => setActiveTab('overview')}
+                                className={`pb-2 text-sm font-medium transition-colors relative ${activeTab === 'overview' ? 'text-purple-400' : 'text-muted-foreground hover:text-white'}`}
+                            >
+                                Overview
+                                {activeTab === 'overview' && <motion.div layoutId="tab-indicator" className="absolute bottom-0 left-0 right-0 h-0.5 bg-purple-400" />}
+                            </button>
+                            <button
+                                onClick={() => setActiveTab('architecture')}
+                                className={`pb-2 text-sm font-medium transition-colors relative ${activeTab === 'architecture' ? 'text-purple-400' : 'text-muted-foreground hover:text-white'}`}
+                            >
+                                Architecture
+                                {activeTab === 'architecture' && <motion.div layoutId="tab-indicator" className="absolute bottom-0 left-0 right-0 h-0.5 bg-purple-400" />}
+                            </button>
                         </div>
 
-                        <div className="mb-8">
-                            <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">Tech Stack</h3>
-                            <div className="flex flex-wrap gap-2">
-                                {project.stack.map((tech) => (
-                                    <span key={tech} className="px-3 py-1 bg-white/5 rounded-full text-sm border border-white/5 text-gray-300">
-                                        {tech}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-
-                        {project.features && project.features.length > 0 && (
-                            <div className="mb-8">
-                                <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">Key Features</h3>
-                                <div className="space-y-2">
-                                    {project.features.map((feature, idx) => (
-                                        <div key={idx} className="flex items-start gap-3 text-sm text-gray-300">
-                                            <CheckCircle className="w-4 h-4 text-purple-400 mt-0.5 flex-shrink-0" />
-                                            <span>{feature}</span>
-                                        </div>
-                                    ))}
+                        {activeTab === 'overview' ? (
+                            <motion.div
+                                initial={{ opacity: 0, x: 20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: -20 }}
+                                className="flex flex-col h-full"
+                            >
+                                <div className="mb-6">
+                                    <span className="text-sm text-purple-400 font-medium mb-2 block">{project.type}</span>
+                                    <h2 className="text-3xl font-bold mb-4">{project.title}</h2>
+                                    <p className="text-muted-foreground leading-relaxed mb-6">
+                                        {project.description}
+                                    </p>
                                 </div>
-                            </div>
+
+                                <div className="mb-8">
+                                    <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">Tech Stack</h3>
+                                    <div className="flex flex-wrap gap-2">
+                                        {project.stack.map((tech) => (
+                                            <span key={tech} className="px-3 py-1 bg-white/5 rounded-full text-sm border border-white/5 text-gray-300">
+                                                {tech}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {project.features && project.features.length > 0 && (
+                                    <div className="mb-8">
+                                        <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">Key Features</h3>
+                                        <div className="space-y-2">
+                                            {project.features.map((feature, idx) => (
+                                                <div key={idx} className="flex items-start gap-3 text-sm text-gray-300">
+                                                    <CheckCircle className="w-4 h-4 text-purple-400 mt-0.5 flex-shrink-0" />
+                                                    <span>{feature}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+                            </motion.div>
+                        ) : (
+                            <motion.div
+                                initial={{ opacity: 0, x: 20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: -20 }}
+                                className="flex flex-col h-full"
+                            >
+                                <h3 className="text-xl font-bold mb-4">System Architecture</h3>
+                                <p className="text-sm text-muted-foreground mb-6">
+                                    A high-level overview of the system's data flow and component interaction.
+                                </p>
+                                <ArchitectureDiagram />
+                            </motion.div>
                         )}
 
-                        <div className="flex gap-4 mt-auto">
-                            {/* Conditional rendering based on repo type could act differently, 
-                   but for now we just show buttons if URLs existed, or generic contact */}
+                        <div className="flex gap-4 mt-auto pt-6 border-t border-white/10">
                             {project.repoUrl && (
                                 <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="flex-1 btn-primary flex items-center justify-center gap-2 py-3 rounded-lg bg-white text-black font-semibold hover:bg-white/90 transition-colors">
                                     <Github className="w-4 h-4" /> View Code
@@ -181,6 +221,6 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }
                     </div>
                 </motion.div>
             </motion.div>
-        </AnimatePresence>
+        </React.Fragment>
     );
 };
