@@ -22,7 +22,14 @@ function App() {
 
       <TechStack />
 
-      <section className="py-24 px-6 max-w-full mx-auto overflow-hidden relative" id="projects">
+      <motion.section
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="py-24 px-6 max-w-full mx-auto overflow-hidden relative"
+        id="projects"
+      >
         <OrbitalBackground />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -49,7 +56,7 @@ function App() {
         </motion.div>
 
         <ProjectCarousel projects={projects} onProjectClick={setSelectedProject} />
-      </section>
+      </motion.section>
 
       <Footer />
 

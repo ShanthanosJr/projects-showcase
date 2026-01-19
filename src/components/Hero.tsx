@@ -9,7 +9,12 @@ export const Hero: React.FC = () => {
     const scrambledTitle = useScrambleText(aboutMe.title);
 
     return (
-        <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-6 pt-20">
+        <motion.section
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-6 pt-20"
+        >
             {/* Particle Force Field Background */}
             <ParticleBackground />
 
@@ -79,6 +84,6 @@ export const Hero: React.FC = () => {
             >
                 <ChevronDown className="w-6 h-6" />
             </motion.div>
-        </section>
+        </motion.section>
     );
 };

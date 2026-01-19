@@ -64,7 +64,13 @@ export const TechStack: React.FC = () => {
     const activeSkills = categories.find(c => c.name === activeTab)?.items || [];
 
     return (
-        <section className="py-24 px-6 relative overflow-hidden">
+        <motion.section
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="py-24 px-6 relative overflow-hidden"
+        >
             <OrbitalBackground />
             <InteractiveGridBackground />
             <div className="max-w-4xl mx-auto relative z-10">
@@ -138,6 +144,6 @@ export const TechStack: React.FC = () => {
                     </AnimatePresence>
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 };
