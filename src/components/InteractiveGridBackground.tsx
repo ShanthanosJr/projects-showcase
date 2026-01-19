@@ -30,8 +30,6 @@ export const InteractiveGridBackground: React.FC = () => {
             const col = Math.floor(x / gridSize);
             const row = Math.floor(y / gridSize);
 
-            // Add/Update cell to lighting list
-            // Check if already exists to reset opacity
             const existing = activeCells.find(c => c[0] === col && c[1] === row);
             if (existing) {
                 existing[2] = 1; // Reset opacity
@@ -83,10 +81,6 @@ export const InteractiveGridBackground: React.FC = () => {
         animate();
 
         window.addEventListener('resize', handleResize);
-        // Attach mouse move to window or specific container? 
-        // Window is easier for tracking, but let's try to attach to the parent container reference if possible, 
-        // but for a background component simple window tracking masked by bounds is often okay.
-        // Actually, let's attach to the canvas itself if it covers the area.
         canvas.addEventListener('mousemove', handleMouseMove);
 
         return () => {
@@ -98,12 +92,7 @@ export const InteractiveGridBackground: React.FC = () => {
     return (
         <canvas
             ref={canvasRef}
-            className="absolute inset-0 z-0 w-full h-full pointer-events-auto" // Needs pointer-events to capture mouse? 
-            // Actually, if it's a background behind content, content will steal clicks.
-            // We need `pointer-events-none` on the canvas usually, but then `mousemove` won't fire on it.
-            // Solution: Attach `mousemove` to the PARENT container in the consuming component, 
-            // OR make this canvas transparent to clicks but listen to window mouse and check bounds.
-            // Let's set style to `pointer-events-none` and listen on window, calculating relative pos.
+            className="absolute inset-0 z-0 w-full h-full pointer-events-auto"
             style={{ pointerEvents: 'none' }}
         />
     );

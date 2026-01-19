@@ -4,6 +4,7 @@ import { aboutMe } from '../data/projects';
 import { fetchGithubStats, type GithubStats } from '../utils/github';
 import { GitCommit, BookMarked, Calendar } from 'lucide-react';
 import { TiltCard } from './TiltCard';
+import { OrbitalBackground } from './OrbitalBackground';
 import { InteractiveGridBackground } from './InteractiveGridBackground';
 
 // Define related skills for the "Constellation" effect
@@ -13,7 +14,6 @@ const RELATED_SKILLS: Record<string, string[]> = {
     "MongoDB": ["Node.js", "Express.js"],
     "TypeScript": ["JavaScript", "React", "Node.js"],
     "TailwindCSS": ["React", "CSS"],
-    // Add more mappings as needed
 };
 
 const SkillCard: React.FC<{
@@ -23,14 +23,7 @@ const SkillCard: React.FC<{
     setHoveredSkill: (skill: string | null) => void;
 }> = ({ skill, hoveredSkill, setHoveredSkill }) => {
 
-    // Determine state:
-    // - Default: opacity 1
-    // - Hovering this card: opacity 1, highlight
-    // - Hovering connected card: opacity 1, highlight
-    // - Hovering unrelated card: opacity 0.3 (dimmed)
-
     const isHovered = hoveredSkill === skill;
-    // Check if THIS skill is in the related list of the HOVERED skill
     const isConnected = hoveredSkill && RELATED_SKILLS[hoveredSkill]?.some(s => s === skill);
     const isDimmed = hoveredSkill && !isHovered && !isConnected;
 
@@ -72,6 +65,7 @@ export const TechStack: React.FC = () => {
 
     return (
         <section className="py-24 px-6 relative overflow-hidden">
+            <OrbitalBackground />
             <InteractiveGridBackground />
             <div className="max-w-4xl mx-auto relative z-10">
                 <motion.div
