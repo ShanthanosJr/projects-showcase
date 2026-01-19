@@ -276,7 +276,7 @@ export const socialLinks = {
 };
 
 export const aboutMe = {
-    name: 'Kavishka Ranamukage',
+    name: 'Kavishka Ravishan',
     title: 'IT Undergraduate | Full Stack Developer',
     description: "I am an undergraduate student in the BSc (Hons) in Information Technology program at SLIIT. My work spans full-stack web development, mobile application development, and UI/UX design, with a strong focus on clean architecture, scalability, and real-world problem solving.",
     skills: {
