@@ -34,6 +34,7 @@ export const projects: Project[] = [
                 '/assets/wfs-engineering/wfseng_4.png',
                 '/assets/wfs-engineering/wfseng_16.png',
                 '/assets/wfs-engineering/wfseng_13.png',
+                '/assets/wfs-engineering/wfseng_20.png',
                 '/assets/wfs-engineering/wfseng_2.png',
                 '/assets/wfs-engineering/wfseng_3.png',
                 '/assets/wfs-engineering/wfseng_5.png',
