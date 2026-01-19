@@ -71,5 +71,6 @@ My work spans full‑stack web development, mobile application development, and 
 ---
 
 ## 📄 License
-This project is proprietary and confidential. Unauthorized copying of this file, via any medium is strictly prohibited.
-Copyright (C) 2026 Kavishka Ranamukage. All Rights Reserved.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+> **Note:** All images, videos, and personal content in the `src/assets` directory and throughout the showcase are proprietary and **NOT** covered by the MIT License. They remain the exclusive property of Kavishka Ravishan.
