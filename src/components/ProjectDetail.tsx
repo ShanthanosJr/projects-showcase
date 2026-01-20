@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { type Project } from '../data/projects';
 import { X, Github, ChevronLeft, ChevronRight, Play, CheckCircle } from 'lucide-react';
 import { ArchitectureDiagram } from './ArchitectureDiagram';
+import { VideoPlayer } from './VideoPlayer';
 
 interface ProjectDetailProps {
     project: Project | null;
@@ -71,14 +72,10 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }
                                 >
                                     <ChevronLeft className="w-3 h-3" /> Back to Images
                                 </button>
-                                <video
+                                <VideoPlayer
                                     src={project.assets.video}
-                                    controls
                                     autoPlay
-                                    className="w-full h-full object-contain max-h-[60vh] md:max-h-full"
-                                >
-                                    Your browser does not support the video tag.
-                                </video>
+                                />
                             </div>
                         ) : project.assets.images.length > 0 ? (
                             <div className="relative w-full h-[300px] md:h-full">
