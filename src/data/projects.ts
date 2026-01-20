@@ -178,7 +178,7 @@ export const projects: Project[] = [
                 '/assets/tourday/td_5.png',
                 '/assets/tourday/td_6.png',
             ],
-            video: '/assets/tourday/TourDay.mp4'
+            video: '/assets/tourday/td_v.mp4'
         },
         features: [
             'Interactive map integration for tour routes',
