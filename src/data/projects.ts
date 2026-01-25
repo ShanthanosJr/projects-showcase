@@ -285,6 +285,6 @@ export const aboutMe = {
         frontend: ['React', 'React Native', 'Vite', 'Tailwind CSS', 'Next.js', 'Bootstrap', 'Nuxt.js', 'Bulma',],
         backend: ['Node.js', 'Express.js', 'Spring Boot', 'Apache Tomcat', 'Docker', 'Web Services', 'REST API', 'GraphQL'],
         database: ['MongoDB', 'MySQL', 'PostgreSQL', 'SQLite', 'Oracle', 'MS SQL Server', 'NoSQL', 'Firebase'],
-        tools: ['Git', 'GitHub', 'Wordpress', 'Postman', 'Jira', 'Trello', 'Canva', 'Figma', 'Vercel', 'Netlify', 'AWS']
+        tools: ['Git', 'GitHub', 'Wordpress', 'Postman', 'Jira', 'Trello', 'Canva', 'Figma', 'Vercel', 'Netlify', 'AWS', 'Playwright']
     }
 };
