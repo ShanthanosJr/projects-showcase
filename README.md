@@ -53,6 +53,12 @@ My work spans full‑stack web development, mobile application development, and 
 - **Description:** A modern e‑commerce frontend focused on product browsing, inventory display, and responsive UI design for a jewelry brand.
 - **Repository:** 🔒 Private
 
+### Ink & Pen Bookstore – Vintage E‑Commerce Platform
+- **Type:** E-Commerce Web Application
+- **Stack:** React, ASP.NET Core, SQL
+- **Description:** A boutique-style bookstore e-commerce application with a vintage-inspired design, focused on book discovery, browsing, and catalog management through a clean and intuitive user experience.
+- **Repository:** Public
+
 ### Logistics Dashboard
 - **Type:** Web Application
 - **Stack:** React, Full Stack
@@ -64,8 +70,8 @@ My work spans full‑stack web development, mobile application development, and 
 ## 🛠️ Technical Focus Areas
 - **Programming Languages:** C, C++, Python, Java, Kotlin, PHP, JavaScript, TypeScript
 - **Frontend Development:** React, React Native, Vite, HTML, CSS, Tailwind CSS
-- **Backend & APIs:** Node.js, Express.js, Spring Boot, RESTful APIs
-- **Databases:** MySQL, MongoDB, SQLite, PostgreSQL
+- **Backend & APIs:** Node.js, Express.js, ASP.NET Core, Spring Boot, RESTful APIs
+- **Databases:** MySQL, MongoDB, SQLite, PostgreSQL, SQL Server
 - **Tools & Practices:** Git, Docker, Postman, Figma, Agile workflows
 
 ---

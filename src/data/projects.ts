@@ -93,6 +93,42 @@ export const projects: Project[] = [
         ]
     },
     {
+        id: 'inkandpens',
+        title: 'Ink & Pen Bookstore',
+        type: 'E-Commerce Web Application',
+        stack: ['React', 'ASP.NET Core', 'SQL'],
+        description: 'A boutique-style bookstore e-commerce application with a vintage-inspired design, focused on book discovery, browsing, and catalog management through a clean and intuitive user experience.',
+        repoType: 'Public',
+        status: 'Completed',
+        assets: {
+            images: [
+                '/assets/inkandpens/inp1.png',
+                '/assets/inkandpens/inp2.png',
+                '/assets/inkandpens/inp3.png',
+                '/assets/inkandpens/inp4.png',
+                '/assets/inkandpens/inp5.png',
+                '/assets/inkandpens/inp6.png',
+                '/assets/inkandpens/inp7.png',
+                '/assets/inkandpens/inp8.png',
+                '/assets/inkandpens/inp9.png',
+                '/assets/inkandpens/inp10.png',
+                '/assets/inkandpens/inp11.png',
+                '/assets/inkandpens/inp12.png',
+                '/assets/inkandpens/inp13.png',
+                '/assets/inkandpens/inp14.png'
+            ],
+            video: '/assets/inkandpens/inkandpen.mp4'
+        },
+        features: [
+            'Advanced book listing with category-based sections',
+            'Search, filtering, and sorting for improved discovery',
+            'Responsive vintage-themed UI inspired by classic bookstores',
+            'FAQ, ratings, and reviews for customer trust',
+            'Clean REST API integration with a relational database'
+        ]
+    },
+
+    {
         id: 'hotelmania',
         title: 'HotelMania',
         type: 'Web Application',
@@ -281,8 +317,8 @@ export const aboutMe = {
     title: 'IT Undergraduate | Full Stack Developer',
     description: "I am an undergraduate student in the BSc (Hons) in Information Technology program at SLIIT. My work spans full-stack web development, mobile application development, and UI/UX design, with a strong focus on clean architecture, scalability, and real-world problem solving.",
     skills: {
-        languages: ['JavaScript', 'TypeScript', 'Java', 'Kotlin', 'Python', 'C', 'C++', 'PHP', 'HTML', 'CSS',],
-        frontend: ['React', 'React Native', 'Vite', 'Tailwind CSS', 'Next.js', 'Bootstrap', 'Nuxt.js', 'Bulma',],
+        languages: ['JavaScript', 'TypeScript', 'Java', 'Kotlin', 'Python', 'C', 'C++', 'C#','PHP', 'HTML', 'CSS',],
+        frontend: ['React', 'React Native', 'Vite','.NET', 'Tailwind CSS', 'Next.js', 'Bootstrap', 'Nuxt.js', 'Bulma',],
         backend: ['Node.js', 'Express.js', 'Spring Boot', 'Apache Tomcat', 'Docker', 'Web Services', 'REST API', 'GraphQL'],
         database: ['MongoDB', 'MySQL', 'PostgreSQL', 'SQLite', 'Oracle', 'MS SQL Server', 'NoSQL', 'Firebase'],
         tools: ['Git', 'GitHub', 'Wordpress', 'Postman', 'Jira', 'Trello', 'Canva', 'Figma', 'Vercel', 'Netlify', 'AWS', 'Playwright']
