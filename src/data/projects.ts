@@ -94,11 +94,11 @@ export const projects: Project[] = [
     },
     {
         id: 'inkandpens',
-        title: 'Ink & Pen Bookstore',
+        title: 'Ink & Pens Bookstore',
         type: 'E-Commerce Web Application',
         stack: ['React', 'ASP.NET Core', 'SQL'],
         description: 'A boutique-style bookstore e-commerce application with a vintage-inspired design, focused on book discovery, browsing, and catalog management through a clean and intuitive user experience.',
-        repoType: 'Public',
+        repoType: 'Private',
         status: 'Completed',
         assets: {
             images: [
@@ -122,8 +122,8 @@ export const projects: Project[] = [
         features: [
             'Advanced book listing with category-based sections',
             'Search, filtering, and sorting for improved discovery',
-            'Responsive vintage-themed UI inspired by classic bookstores',
-            'FAQ, ratings, and reviews for customer trust',
+            'Cart management with local storage persistence',
+            'Customer trust through FAQ, ratings, and reviews',
             'Clean REST API integration with a relational database'
         ]
     },
