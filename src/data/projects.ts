@@ -115,16 +115,21 @@ export const projects: Project[] = [
                 '/assets/inkandpens/inp11.png',
                 '/assets/inkandpens/inp12.png',
                 '/assets/inkandpens/inp13.png',
-                '/assets/inkandpens/inp14.png'
+                '/assets/inkandpens/inp14.png',
+                '/assets/inkandpens/inp15.png',
+                '/assets/inkandpens/inp16.png',
+                '/assets/inkandpens/inp17.png',
+                '/assets/inkandpens/inp18.png',
+
             ],
-            video: '/assets/inkandpens/inkandpen.mp4'
+            video: '/assets/inkandpens/inkandpens.mp4'
         },
         features: [
-            'Advanced book listing with category-based sections',
-            'Search, filtering, and sorting for improved discovery',
-            'Cart management with local storage persistence',
-            'Customer trust through FAQ, ratings, and reviews',
-            'Clean REST API integration with a relational database'
+            'Advanced book discovery with categories, search, filters, and sorting',
+            'Secure user authentication with profile-based access',
+            'Persistent cart system with quantity control and order summary',
+            'Checkout flow with delivery details and payment method selection',
+            'Order history and delivery status tracking within user profiles',
         ]
     },
 
@@ -317,8 +322,8 @@ export const aboutMe = {
     title: 'IT Undergraduate | Full Stack Developer',
     description: "I am an undergraduate student in the BSc (Hons) in Information Technology program at SLIIT. My work spans full-stack web development, mobile application development, and UI/UX design, with a strong focus on clean architecture, scalability, and real-world problem solving.",
     skills: {
-        languages: ['JavaScript', 'TypeScript', 'Java', 'Kotlin', 'Python', 'C', 'C++', 'C#','PHP', 'HTML', 'CSS',],
-        frontend: ['React', 'React Native', 'Vite','.NET', 'Tailwind CSS', 'Next.js', 'Bootstrap', 'Nuxt.js', 'Bulma',],
+        languages: ['JavaScript', 'TypeScript', 'Java', 'Kotlin', 'Python', 'C', 'C++', 'C#', 'PHP', 'HTML', 'CSS',],
+        frontend: ['React', 'React Native', 'Vite', '.NET', 'Tailwind CSS', 'Next.js', 'Bootstrap', 'Nuxt.js', 'Bulma',],
         backend: ['Node.js', 'Express.js', 'Spring Boot', 'Apache Tomcat', 'Docker', 'Web Services', 'REST API', 'GraphQL'],
         database: ['MongoDB', 'MySQL', 'PostgreSQL', 'SQLite', 'Oracle', 'MS SQL Server', 'NoSQL', 'Firebase'],
         tools: ['Git', 'GitHub', 'Wordpress', 'Postman', 'Jira', 'Trello', 'Canva', 'Figma', 'Vercel', 'Netlify', 'AWS', 'Playwright']
