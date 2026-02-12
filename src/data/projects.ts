@@ -236,7 +236,7 @@ export const projects: Project[] = [
         stack: ['Kotlin', 'SQLite'],
         database: 'SQLite',
         description: 'A mobile application designed to log daily moods and analyze emotional patterns, supporting self-reflection and mental wellness tracking.',
-        repoType: 'Private',
+        repoType: 'Public',
         status: 'Completed',
         assets: {
             images: [
